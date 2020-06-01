@@ -6,5 +6,10 @@ class Category(models.Model):
     slug = models.SlugField(max_length=250, unique=True)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
 
+    class Meta:
+        verbose_name = "category"
+        verbose_name_plural = "categories"
+
     def __str__(self):
         return self.title
+    
