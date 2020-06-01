@@ -11,6 +11,6 @@ class CategoryListView(ListAPIView):
     serializer_class = CategoryListSerializers
 
 
-class CategoryCreateView(CreateAPIView):
-    queryset = Category.objects.all()
-    serializer_class = CategoryListSerializers
+# class CategoryCreateView(CreateAPIView):
+#     queryset = Category.objects.all()
+#     serializer_class = CategoryListSerializers
