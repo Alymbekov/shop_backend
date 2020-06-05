@@ -1,11 +1,17 @@
 from rest_framework import serializers
 from .models import Category
-from rest_framework_recursive.fields import RecursiveField
+
+
+class RecursiveSerializer(serializers.Serializer):
+    """Get recursive children"""
+    def to_representation(self, value):
+        serializer = self.parent.parent.__class__(value, context=self.context)
+        return serializer.data
 
 
 class CategoryListSerializers(serializers.ModelSerializer):
     """Get list Categoty model"""
-    children = RecursiveField(many=True) # return subcategory
+    children = RecursiveSerializer(many=True)  # return subcategory
 
     class Meta:
         model = Category
