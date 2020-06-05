@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Product(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
@@ -19,19 +18,16 @@ class Product(models.Model):
 class Color(models.Model):
     pass
 
+
 class Size(models.Model):
     pass
+
 
 class ProductImages(models.Model):
     pass
 
+
 class Meta(models.Model):
     pass
-
-
-
-
-
-
 
 
