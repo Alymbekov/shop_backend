@@ -1,4 +1,5 @@
 from django.db import models
+from apps.categorys.models import Category
 
 
 class Product(models.Model):
@@ -10,6 +11,7 @@ class Product(models.Model):
     available = models.BooleanField(default=False)
     stock = models.PositiveIntegerField(default=1)
     in_stock = models.BooleanField(default=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.title
