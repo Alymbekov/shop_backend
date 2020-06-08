@@ -1,4 +1,6 @@
-from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView, UpdateAPIView
+from rest_framework.generics import (
+    ListCreateAPIView, RetrieveAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView
+    )
 from .serializers import ProductListSerializer, ProductSerializer
 from .models import Product
 from django_filters.rest_framework import DjangoFilterBackend
@@ -11,7 +13,7 @@ class ProductListView(ListAPIView):
     filterset_fields = ['title', ]
 
 
-class ProductDetailView(RetrieveAPIView):
+class ProductDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -21,6 +23,6 @@ class ProductCreateView(CreateAPIView):
     serializer_class = ProductSerializer
 
 
-class ProductUpdateView(UpdateAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductListSerializer
+# class ProductUpdateView(UpdateAPIView):
+#     queryset = Product.objects.all()
+#     serializer_class = ProductListSerializer
