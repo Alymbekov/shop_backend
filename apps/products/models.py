@@ -26,6 +26,7 @@ def product_slug_generate(sender, instance, *args, **kwargs):
 pre_save.connect(product_slug_generate, sender=Product)
 
 
+
 class Color(models.Model):
     pass
 
