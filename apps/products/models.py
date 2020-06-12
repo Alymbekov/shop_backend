@@ -3,6 +3,7 @@ from apps.categorys.models import Category
 from django.db.models.signals import pre_save
 from shop.utils import slug_generator
 from datetime import datetime
+from django.utils.crypto import get_random_string
 
 class Product(models.Model):
     title = models.CharField(max_length=150)
@@ -21,8 +22,9 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
+            unique_name = get_random_string(length=32)
             date = datetime.now()
-            self.image.name = str(date) + ('.jpg')
+            self.image.name = f'{str(date)} {unique_name}.jpg'
 
         super().save(*args, **kwargs)
 
