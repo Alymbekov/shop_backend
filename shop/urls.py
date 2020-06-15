@@ -14,6 +14,7 @@ urlpatterns = [
     path('api/v1/rest-auth/registration/',include('rest_auth.registration.urls')),
     path('api/v1/', include('apps.products.urls')),
     path('api/v1/', include('apps.authentication.urls')),
+    path('api/v1/', include('apps.carts.urls')),
     path('api/v1/documentation/', include_docs_urls(title='Shop Backend')),
     path('api/v1/schema/', schema_view),
 ]

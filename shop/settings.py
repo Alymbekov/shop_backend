@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'apps.categorys',
     'apps.products',
+    'apps.carts',
+    'apps.orders',
     'apps.authentication',
     'django_filters'
 
