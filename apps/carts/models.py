@@ -33,3 +33,4 @@ class CartItem(models.Model):
 
     def __str__(self):
         return f"{self.cart.id} == cart item"
+
