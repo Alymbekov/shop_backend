@@ -13,4 +13,3 @@ urlpatterns = [
     path('product/create/', ProductCreateView.as_view()),
     # path('product/<int:pk>/update/', ProductUpdateView.as_view()),
 ]
-

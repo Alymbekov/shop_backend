@@ -41,5 +41,3 @@ class ProductImages(models.Model):
 
 class Meta(models.Model):
     pass
-
-
