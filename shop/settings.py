@@ -33,11 +33,15 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'apps.categorys',
     'apps.products',
+<<<<<<< HEAD
     'apps.carts',
     'apps.orders',
     'apps.authentication',
     'django_filters'
 
+=======
+    'django_filters',
+>>>>>>> add full 'CRUD' sistem to category and product models , add filter
 ]
 SITE_ID = 1
 
@@ -83,6 +87,7 @@ DATABASES = {
 }
 
 
+<<<<<<< HEAD
 AUTH_USER_MODEL = 'authentication.User'
 
 REST_FRAMEWORK = {
@@ -95,6 +100,10 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 
+=======
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+>>>>>>> add full 'CRUD' sistem to category and product models , add filter
 }
 
 # Password validation

@@ -27,7 +27,6 @@ class CategoryDetailView(RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticatedOrReadOnly]
     serializer_class = CategoryListSerializers
 
-
 # class CategoryDestroyView(DestroyAPIView):
 #     queryset = Category.objects.all()
 #     serializer_class = CategoryListSerializers
@@ -36,4 +35,3 @@ class CategoryDetailView(RetrieveUpdateDestroyAPIView):
 # class CategoryUpdateView(UpdateAPIView):
 #     queryset = Category.objects.all()
 #     serializer_class = CategoryCreateSerializers
-
