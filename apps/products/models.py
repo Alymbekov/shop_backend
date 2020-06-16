@@ -3,7 +3,6 @@ from apps.categorys.models import Category
 from django.db.models.signals import pre_save
 from shop.utils import slug_generator
 
-
 class Product(models.Model):
     title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=255, unique=True, blank=True)
@@ -24,8 +23,8 @@ def product_slug_generate(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = slug_generator(instance)
 
-
 pre_save.connect(product_slug_generate, sender=Product)
+
 
 
 class Color(models.Model):

@@ -33,18 +33,11 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'apps.categorys',
     'apps.products',
-<<<<<<< HEAD
-    'apps.carts',
-    'apps.orders',
     'apps.authentication',
     'django_filters'
 
-=======
-    'django_filters',
->>>>>>> add full 'CRUD' sistem to category and product models , add filter
 ]
 SITE_ID = 1
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,8 +79,6 @@ DATABASES = {
     }
 }
 
-
-<<<<<<< HEAD
 AUTH_USER_MODEL = 'authentication.User'
 
 REST_FRAMEWORK = {
@@ -100,10 +91,6 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 
-=======
-REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
->>>>>>> add full 'CRUD' sistem to category and product models , add filter
 }
 
 # Password validation
@@ -143,6 +130,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
